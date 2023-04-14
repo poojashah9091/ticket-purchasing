@@ -1,9 +1,10 @@
 import React from "react";
+import "./style.scss"
 
-const Footer = () =>{
+const Footer = () => {
     return (
-        <div>
-            Footer
+        <div className="footer_container"> 
+             Copyright © 2023 PoojaShah. All Rights Reserved
         </div>
     )
 }

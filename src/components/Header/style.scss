@@ -1,0 +1,31 @@
+.header_container{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    height: 3%;
+    box-shadow: -2px -2px 11px 0px #d1d1d1;
+    .brand{
+        & > a{
+            text-decoration: none;
+        }
+        .brand_name{
+            & > label{
+                margin-bottom: 10px;
+                font-size: 30px;
+                font-weight: 900;
+                color: #00479b;
+                font-family:fantasy;
+            }
+            & > label:hover{
+                cursor: pointer;
+            }
+        }
+        .brand_logo{
+            & > img{
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+}
