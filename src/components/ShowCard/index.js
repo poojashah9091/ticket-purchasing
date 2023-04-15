@@ -14,7 +14,8 @@ const ShowCard = ({title, posterURL, price, showDate}) =>{
         dispatch(addBookingDetails({
                 name: title,
                 date: showDate,
-                perTicketPrice: price
+                perTicketPrice: price,
+                quantity: 1
         }));
         navigate("/checkout");
     }
@@ -25,7 +26,7 @@ const ShowCard = ({title, posterURL, price, showDate}) =>{
                 <img src={posterURL} alt={title}/>
                 <div className="show_basic_info">
                     <label className="show_title">{title}</label>
-                    <label className="show_price">Price per ticket: {price}</label>
+                    <label className="show_price">Price per ticket: ${price}</label>
                     <label className="show_date">Will be held on: {showDate}</label>
                 </div>
             </div>

@@ -1,0 +1,39 @@
+.card_details_container{
+    background-color: #e7f3fa;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+
+    .details_container{
+        display: flex;
+
+        .input_label{
+            color: #625d5d;
+            font-size: 13px;
+            font-weight: 500;
+            margin-right: 7px;
+        }
+        .input_box{
+           &:disabled{
+            border: none;
+            font-weight: 600;
+
+           }
+        }
+    }
+    .card_details{
+        display: flex;
+        justify-content: space-between;
+    }
+    .small_input_box{
+        width: 45px;
+    }
+    .large_input_box{
+        width: 80%;
+    }
+
+}
