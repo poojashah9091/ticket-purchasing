@@ -2,7 +2,7 @@
     background-color: #e7f3fa;
     border: 1px solid transparent;
     border-radius: 10px;
-    height: 200px;
+    height: 175px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,6 +10,7 @@
 
     .details_container{
         display: flex;
+        align-items: center;
 
         .input_label{
             color: #625d5d;
@@ -33,7 +34,7 @@
         width: 45px;
     }
     .large_input_box{
-        width: 80%;
+        width: 60%;
     }
 
 }

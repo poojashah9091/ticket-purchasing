@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { addBookingDetails } from "../../data/billSlice";
+import { addReservationDetails } from "../../data/billSlice";
 import "./style.scss";
 
 const ShowCard = ({title, posterURL, price, showDate}) =>{
@@ -11,7 +11,7 @@ const ShowCard = ({title, posterURL, price, showDate}) =>{
 
 
     const handleBuyNowAction = () =>{
-        dispatch(addBookingDetails({
+        dispatch(addReservationDetails({
                 name: title,
                 date: showDate,
                 perTicketPrice: price,

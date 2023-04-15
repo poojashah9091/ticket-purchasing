@@ -2,13 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const billSlice = createSlice({
     name: "generatedBill",
     initialState: {
-        cardDetails:[{
-            user: "Pooja Shah",
-            cardNumber: 1234567812345678,
-            expiryDate: "04/28",
-            securityCode: 1234
-        }],
-        bookedShowDetails:{
+        reservedShowDetails:{
             name: "",
             date: "",
             perTicketPrice: 0,
@@ -18,38 +12,40 @@ const billSlice = createSlice({
             serviceFees: 1.08,
             deliveryFees: 0.00,
             orderProcessingFees: 2.00
-        }
+        },
+        finalBookingDetails:{
+            showName: "",
+            quantity: 0,
+            date: "",
+            totalValue: ""
+        },
+        status: "",
+        error: ""
     },
     reducers: {
-        addBookingDetails: (state, action)=>{
-            state.bookedShowDetails = {
+        addReservationDetails: (state, action)=>{
+            state.reservedShowDetails = {
                 name: action.payload.name,
                 date: action.payload.date,
                 perTicketPrice: action.payload.perTicketPrice,
                 quantity: action.payload.quantity
             }
+            
         },
-        addCardDetails: (state, action)=>{
-            state.cardDetails.push(
-                {
-                    user: action.payload.name,
-                    cardNumber: action.payload.cardNumber,
-                    expiryDate: action.payload.expiryDate,
-                    securityCode: action.payload.securityCode
-                }
-            )
+        clearBillStatus: (state)=>{
+            state.status = "";
         },
-        editCardDetails: (state, action)=>{
-            let cardIndex = state.cardDetails.findIndex(card=>card.cardNumber === action.payload.cardNumber);
-            state.cardDetails[cardIndex] = {
-                user: action.payload.name,
-                cardNumber: action.payload.cardNumber,
-                expiryDate: action.payload.expiryDate,
-                securityCode: action.payload.securityCode
+        addFinalBookingDetails: (state, action)=>{
+            state.finalBookingDetails = {
+                showName: action.payload.name,
+                quantity: action.payload.quantity,
+                date: action.payload.date,
+                totalValue: action.payload.totalValue
             }
+            state.status = "success";
         }
-    },
+    }
 });
 
 export default billSlice.reducer;
-export const {addCardDetails, editCardDetails, addBookingDetails} = billSlice.actions;
+export const {addReservationDetails, clearBillStatus, addFinalBookingDetails} = billSlice.actions;

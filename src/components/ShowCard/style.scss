@@ -38,21 +38,18 @@
         }
     }
     .show_buy_cta{
-        // & > button{
-            background-color: #00479b;
-            color: #edf2f2;
-            border: 1px solid transparent;
-            border-radius: 10px;
-            padding: 5px 20px;
-            font-weight: 900;
-            font-size: 15px;
-            height: 20px;
-            text-decoration: none;
+        background-color: #00479b;
+        color: #edf2f2;
+        border: 1px solid transparent;
+        border-radius: 10px;
+        padding: 5px 20px;
+        font-weight: 900;
+        font-size: 15px;
+        height: 20px;
+        text-decoration: none;
 
-            &:hover{
-                cursor: pointer;
-            }
-        // }
-        
+        &:hover{
+            cursor: pointer;
+        }
     }
 }

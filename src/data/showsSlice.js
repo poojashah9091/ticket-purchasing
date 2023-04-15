@@ -4,11 +4,14 @@ import movies from "../constants/movies.json";
 const showsSlice = createSlice({
     name: "showsList",
     initialState: {
-        allShowsList: []
+        allShowsList: [],
+        status: "",
+        error: ""
     },
     reducers: {
         getShowsList: (state)=>{
             state.allShowsList = movies;
+            state.status = "success";
         }
     },
 });

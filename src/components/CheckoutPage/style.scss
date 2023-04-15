@@ -94,6 +94,9 @@
                     color: white;
                     padding: 5px 20px;
                     margin-top: 10px;
+                    &:hover{
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -131,6 +134,13 @@
                 height: 50px;
                 font-size: 19px;
                 margin-top: 20px;
+                &:hover{
+                    cursor: pointer;
+                }
+                &:disabled{
+                    opacity: 50%;
+                    cursor: not-allowed;
+                }
             }
             .disclaimer{
                 font-size: 13px;
