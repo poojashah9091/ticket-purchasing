@@ -2,17 +2,22 @@ import { createSlice } from "@reduxjs/toolkit";
 const billSlice = createSlice({
     name: "generatedBill",
     initialState: {
-        cardDetails:{
+        cardDetails:[{
             user: "Pooja Shah",
             cardNumber: 1234567812345678,
             expiryDate: "04/28",
             securityCode: 1234
-        },
+        }],
         bookedShowDetails:{
             name: "",
             date: "",
             perTicketPrice: 0,
             quantity: 0
+        },
+        otherCharges:{
+            serviceFees: 1.08,
+            deliveryFees: 0.00,
+            orderProcessingFees: 2.00
         }
     },
     reducers: {
