@@ -90,18 +90,18 @@ const CheckoutPage = () =>{
         <>
             <div className="checkout_container">
                 {/* Booking Details Section */}
-                <div className="booked_show_details_container">
+                <div className="sub_section_container">
                     <label className="header">
                         Booking Details
                     </label>
                     <div className="booked_show_details">
                         <div className="checkout_show_details">
-                            <label className="show_title">{showDetails.name}</label>
+                            <label className="sub_header">{showDetails.name}</label>
                             <label className="show_price">Price per ticket: ${showDetails.perTicketPrice || "-"}</label>
-                            <label className="show_date">Will be held on: {showDetails.date || "-"}</label>
+                            <label className="internal_details">Will be held on: {showDetails.date || "-"}</label>
                         </div>
                         <div className="qty_cta_container">
-                            <InputLabel id="demo-simple-select-label">Quantity</InputLabel>
+                            <label className="internal_details">Quantity</label>
                             <Select
                                 labelId="demo-simple-select-label"
                                 id="demo-simple-select"
@@ -119,7 +119,7 @@ const CheckoutPage = () =>{
                 <div className="checkout_summary">
                     <div className="miscelleneous_details">
                         {/* Delivery Details Section */}
-                        <div className="deliver_details_container">
+                        <div className="sub_section_container">
                             <label className="header">
                                 Delivery
                             </label>
@@ -133,7 +133,7 @@ const CheckoutPage = () =>{
                             <label className="delivery_info internal_details">Once booking is sucessfully completed, these tickets will be delievered to you on your registered email address within 4hrs</label>
                         </div>
                         {/* Card Details Section */}
-                        <div className="payment_details_container">
+                        <div className="sub_section_container">
                             <label className="header">
                                 Payment
                             </label>
@@ -149,7 +149,7 @@ const CheckoutPage = () =>{
                         </div>
                     </div>
                     {/* Total Details Section */}
-                    <div className="total_bill_container">
+                    <div className="total_bill_container sub_section_container">
                         <div className="final_total">
                             <label className="header">Total</label>
                             <label className="header">${finalTotal}</label>

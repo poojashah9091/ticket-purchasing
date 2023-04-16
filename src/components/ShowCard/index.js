@@ -27,7 +27,7 @@ const ShowCard = ({title, posterURL, price, showDate}) =>{
                 <div className="show_basic_info">
                     <label className="show_title">{title}</label>
                     <label className="show_price">Price per ticket: ${price}</label>
-                    <label className="show_date">Will be held on: {showDate}</label>
+                    <label className="show_date">Date: {showDate}</label>
                 </div>
             </div>
             <div className="show_buy_cta" onClick={handleBuyNowAction}>
