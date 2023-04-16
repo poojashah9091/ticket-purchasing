@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import MenuItem from '@mui/material/MenuItem';
-import InputLabel from '@mui/material/InputLabel';
 import Select from '@mui/material/Select';
 import Checkbox from '@mui/material/Checkbox';
 import CardDetailsSection from "../CardDetailsSection";
