@@ -110,7 +110,7 @@ const CheckoutPage = () =>{
                                 onChange={handleChange}
                             >
                                 {allowedBuyQuantity.map(item=>{
-                                    return <MenuItem value={item}>{item}</MenuItem>
+                                    return <MenuItem key={item} value={item}>{item}</MenuItem>
                                 })}
                             </Select>
                         </div>
