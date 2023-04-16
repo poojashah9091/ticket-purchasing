@@ -119,8 +119,16 @@
                 .terms_label{
                     font-weight: 700;
                     color: #625d5d;
-                    & > a{
-                        text-decoration: none;
+                    .terms_of_use{
+                        border: 1px solid transparent;
+                        background-color: transparent;
+                        color: #0f47d2;
+                        font-weight: 700;
+                        font-size: 15px;
+                        padding: 0px;
+                        &:hover{
+                            cursor: pointer;
+                        }
                     }
                 }
             }

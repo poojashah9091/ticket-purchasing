@@ -47,7 +47,7 @@ const CheckoutPage = () =>{
 
     useEffect(()=>{
         setFinalTotal((showDetails.perTicketPrice * quantity) + (serviceFees * quantity) + (deliveryFees)); 
-    },[quantity])
+    },[quantity, deliveryFees, serviceFees, showDetails.perTicketPrice])
 
     const handleChange = (e) => {
         setQuantity(e.target.value);
@@ -190,7 +190,7 @@ const CheckoutPage = () =>{
                                 onChange={handleChangeOfTermsConsent}
                                 inputProps={{ 'aria-label': 'controlled' }}
                             />
-                            <label className="terms_label"> I have read and agree to the <a href="">Terms Of Use</a></label>
+                            <label className="terms_label"> I have read and agree to the <button className="terms_of_use">Terms Of Use</button></label>
                         </div>
                         <button onClick={handlePlaceOrderBtn} className="place_order_btn" disabled={!isTermsAgreed}>Place Order</button>
                         <label className="disclaimer">*Exemptions may apply, see our terms of Use</label>

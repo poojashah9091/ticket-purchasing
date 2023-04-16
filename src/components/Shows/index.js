@@ -11,7 +11,7 @@ const Shows = () =>{
 
     useEffect(()=>{
         dispatch(getShowsList());
-    },[]);
+    },[dispatch]);
 
     return (
         <div className="show_list_container">

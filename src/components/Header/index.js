@@ -1,11 +1,9 @@
 import React from "react";
 import Logo from "../../images/logo.svg";
 import "./style.scss";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () =>{
-
-    const location = useLocation();
 
     return(
         <div className="header_container">
